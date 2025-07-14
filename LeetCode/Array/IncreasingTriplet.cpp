@@ -9,24 +9,29 @@ class Solution{
         int n = nums.size();
         int k;
         int count;
+        int l;
+        int m;
         for(int i = 0; i<n; i++){
             count = 1;
             k = i;
-            for(int j = i+1; j<n; j++){ 
+            m = i;
+            l = 1;
+            while(l < n){
+                count = 1;
+                k = i;
+                for(int j = m+1; j<n; j++){ 
 
-                if(nums[k] < nums[j]){
-                    //cout<<"count = "<<count<<endl;
-                    cout<<"k = "<<k<<", "<<nums[k]<<" j = "<<j<<", "<<nums[j]<<endl;
-                    count++;
-                    k = j;
-                    cout<<"count = "<<count<<endl;
+                    if(nums[k] < nums[j]){
+                        k = j;
+                        count++;
+                    }
+                    if(count == 3){
+                        return true;
+                    }    
                 }
-                if(count == 3){
-                    return true;
-                }
-                    
+                l++;
+                m++;
             }
-            
 
         }
         return false;
