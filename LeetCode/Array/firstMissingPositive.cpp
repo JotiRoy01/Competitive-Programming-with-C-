@@ -18,7 +18,7 @@ class Solution{
                     height = nums[i];
                 }
             }
-            
+
             int k = 0;
             int smp = small;
             for(int j = small ; j<height ; j++){
@@ -29,13 +29,18 @@ class Solution{
                     }
 
                 }
-                
-
             }
             if(small != 1){
                 small = 1;
             }
-            
+            vector<int>newArray = {};
+            for(int i = 0 ; i<n; i++){
+                for(int j = 0 ; j<n-i ; j++){
+                    if(nums[i] < nums[j]){
+
+                    }
+                }
+            }
 
 
         }
